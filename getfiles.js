@@ -1,6 +1,6 @@
 //joining path of directory
-function getfiles() {
-  const directoryPath = path.join("./../../../Downloads", "downloads");
+function getfiles(x) {
+  const directoryPath = x || path.join("./../../../Downloads", "downloads");
   //passsing directoryPath and callback function
   fs.readdir(directoryPath, function (err, files) {
     //handling error
@@ -8,6 +8,10 @@ function getfiles() {
       return console.log("Unable to scan directory: " + err);
     }
     //listing all files using forEach
+    let allFiles = document.querySelectorAll(".files")
+    allFiles.forEach(x=>{
+      x.remove();
+    })
     files.forEach(function (file) {
       // Do whatever you want to do with the file
       // console.log(file);

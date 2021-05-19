@@ -45,7 +45,10 @@ function getresults(disks) {
         <div class="progress-bar">
               <div class="percentage"></div>
           </div>
-          <div class="info">
+          <div class="info" style="
+          display: flex;
+          justify-content: space-between;
+      ">
               <div class="size">${driveSize} GB</div>
               <div class="file">${width}%</div>
           </div>
