@@ -18,15 +18,12 @@ function getfiles(x) {
       let getallfiles = document.querySelector(".allfiles");
      
       getallfiles.innerHTML += `<div class="file" 
-            style="
-            display: flex;
-           
-            padding-left: 2vw;
-            opacity: 0.6;  
-            max-height :10rem;          
-            text-align: -webkit-auto;
-            border-bottom: 3px solid grey;
-            ">
+      style="
+      display: flex;
+      max-height: 10rem;
+      min-height: 3vw;
+      border-bottom: 3px solid #80808021;
+      ">
             
             <div class="file-body">
                 <li class="file-title">

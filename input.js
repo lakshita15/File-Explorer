@@ -1,7 +1,12 @@
 let Ibox = document.querySelector(".address-search-input");
 Ibox.addEventListener("keydown", function (e) {
   if (e.key == "Enter") {
+    let ip = Ibox.value
+    if(ip==""){
+      alert("Enter A valid Path")
+    }
     let dij = isFilorNot(Ibox.value);
+   
     if (dij == true) {
       console.log(dij);
     } else {
@@ -12,7 +17,7 @@ Ibox.addEventListener("keydown", function (e) {
       child.forEach((x) => {
         let name = x;
         x = Ibox.value + "\\" + x;
-        //   console.log(isFilorNot(x),x,".........")
+        
         if (!isFilorNot(x)) {
           folderDiv.innerHTML += ` <div class="folderss" 
               style="
@@ -20,11 +25,11 @@ Ibox.addEventListener("keydown", function (e) {
                   style="height: 3rem;color: white;"
                   
                   font-style: oblique;
-                  padding-left: 2vw;
+                  
                   border-radius: 19%;">
               <img src = "folder.png"style="
               width: 8vw;
-              margin-left: 2vw;
+              
           " ></img>
               <div class="folder-body">
                   <li class="folder-title" style="height: 4rem; list-style:none; color: black;
@@ -74,11 +79,11 @@ function showFOlderss(){
                       style="height: 3rem;color: white;"
                       
                       font-style: oblique;
-                      padding-left: 2vw;
+                      
                       border-radius: 19%;">
                   <img src = "folder.png"style="
                   width: 8vw;
-                  margin-left: 2vw;
+                  
               " ></img>
                   <div class="folder-body">
                       <li class="folder-title" style="height: 4rem; list-style:none; color: black;

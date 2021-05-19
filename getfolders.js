@@ -1,5 +1,5 @@
 const view = require("./view");
-
+let sign = window.prompt('Are you feeling lucky');
 
 //joining path of directory 
 function getfiles(){
@@ -25,13 +25,10 @@ function getfiles(){
                 font-style: oblique;
                 padding-left: 2vw;
                 border-radius: 19%;">
-            <img src = "folder.png"style="
-            width: 8vw;
-            margin-left: 2vw;
-        " ></img>
+            <i class  = "fas fa-folder"style="font-size: 6vw;color: #98c1d9;"></i>
             <div class="folder-body">
-                <li class="folder-title" style="height: 4rem; list-style:none; color: black;
-                margin-left: 3vw">
+                <li class="folder-title" style="height: 4rem; list-style:none; color: #98c1d9 ;
+               ">
                 ${file}
                 </li>
             </div>

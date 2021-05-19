@@ -26,18 +26,21 @@ function getresults(disks) {
     template.innerHTML +=
      `<div class="card" 
      style="
-     width: 18vw;
-     background-color: hsl(235deg 21% 21% / 63%);
+     height: 12vw;
+     width: 14vw;
+     margin: 0vw;
+     background-color: #98c1d9;
      font-style: oblique;
-     padding-left: 0.5vw;
+     /* padding-left: 0.5vw; */
      opacity: 0.8;
      border-radius: 10%;
-     box-shadow: 7px 4px 9px 2px black;
+     padding: 1vw;
+     box-shadow: 2px 0px 9px 2px #98c1d9;
      /* border: 3px solid #bbf9af; */
      ">
            
             <div class="card-body">
-                <h2 class="card-title" style="height: 3rem;color: white;">
+                <h2 class="card-title" style="height: 3rem;color: #3d5a80;padding: 1vw;">
                 ${disk.mounted}
                 </h2>
             </div>
@@ -47,6 +50,9 @@ function getresults(disks) {
           </div>
           <div class="info" style="
           display: flex;
+          font-size: 1vw;
+          color: #3d5a80;
+          margin-top: 1vw;
           justify-content: space-between;
       ">
               <div class="size">${driveSize} GB</div>
