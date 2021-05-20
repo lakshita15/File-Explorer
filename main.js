@@ -13,7 +13,10 @@ function createWindow () {
     
   })
 
-  win.loadFile('index.html')
+  win.loadFile('index.html').then(function(){
+    win.removeMenu(); 
+    win.maximize();
+  });
 }
 
 app.whenReady().then(() => {

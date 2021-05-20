@@ -1,42 +1,4 @@
 
-
-//joining path of directory 
-function getfiles(){
-    
-    const directoryPath = path.join("./../../../Downloads", 'organized_files');
-    //passsing directoryPath and callback function
-    fs.readdir(directoryPath, function (err, files) {
-        //handling error
-        if (err) {
-            return console.log('Unable to scan directory: ' + err);
-        } 
-      
-        //listing all files using forEach
-        files.forEach(function (file) {
-            
-            let getallfiles = document.querySelector(".getfolders")
-            getallfiles.innerHTML+=`<div class="folderss" 
-            style="
-                width: 19vw;
-                style="height: 3rem;color: white;"
-                
-                font-style: oblique;
-                padding-left: 2vw;
-                border-radius: 19%;">
-            <i class  = "fas fa-folder"style="font-size: 6vw;color: #98c1d9;"></i>
-            <div class="folder-body">
-                <li class="folder-title" style="height: 4rem; list-style:none; color: #98c1d9 ;
-               ">
-                ${file}
-                </li>
-            </div>
-            
-        
-         
-     </div>`
-           
-            
-        });
         let hide = document.querySelector(".fa-caret-up")
          hide.addEventListener("click", function(){
         
@@ -51,6 +13,5 @@ function getfiles(){
     })
 
     
-    });
-}
+  
 getfiles();

@@ -1,5 +1,6 @@
 let arr = [];
-
+// let fs = require("fs")
+// let p = require("path")
 function view(dirpath, mode) {
     if (mode == "tree") {
         // console.log("Tree is working")
@@ -14,6 +15,7 @@ function view(dirpath, mode) {
 function isFilorNot(dirpath) {
     // check extension
     return fs.lstatSync(dirpath).isFile();
+    
 }
 function getContent(dirpath) {
     let filesss = fs.readdirSync(dirpath);
