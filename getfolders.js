@@ -10,7 +10,7 @@ function getfiles(){
         if (err) {
             return console.log('Unable to scan directory: ' + err);
         } 
-        console.log(files)
+      
         //listing all files using forEach
         files.forEach(function (file) {
             

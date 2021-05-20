@@ -49,7 +49,7 @@ function orgFiles(dirpath, organizedFilesPath) {
         copytodest(dirpath, destFolderPath);
     } else {
         let content = getContent(dirpath);
-        for (let i = 0; i < content.length; i++) {
+        for (let i in content) {
             let childPath = path.join(dirpath, content[i])
             orgFiles(childPath, organizedFilesPath);
         }

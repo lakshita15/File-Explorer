@@ -10,8 +10,9 @@ Ibox.addEventListener("keydown", function (e) {
     if (dij == true) {
       console.log(dij);
     } else {
-        
+        console.log('............................',Ibox.value)
         let child = getContent(Ibox.value);
+        console.log(child)
       let folderDiv = document.querySelector(".getfolders");
       folderDiv.innerHTML = "";
       child.forEach((x) => {
@@ -27,10 +28,7 @@ Ibox.addEventListener("keydown", function (e) {
                   font-style: oblique;
                   
                   border-radius: 19%;">
-              <img src = "folder.png"style="
-              width: 8vw;
-              
-          " ></img>
+                  <i class  = "fas fa-folder"style="font-size: 6vw;color: #98c1d9;"></i>
               <div class="folder-body">
                   <li class="folder-title" style="height: 4rem; list-style:none; color: black;
                   margin-left: 3vw">
@@ -81,10 +79,7 @@ function showFOlderss(){
                       font-style: oblique;
                       
                       border-radius: 19%;">
-                  <img src = "folder.png"style="
-                  width: 8vw;
-                  
-              " ></img>
+                  <i class  = "fas fa-folder"style="font-size: 6vw;color: #98c1d9;"></i>
                   <div class="folder-body">
                       <li class="folder-title" style="height: 4rem; list-style:none; color: black;
                       margin-left: 3vw">

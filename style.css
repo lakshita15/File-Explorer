@@ -10,16 +10,24 @@ body{
     background-color: #102343f0;
     overflow-x: hidden;
 }
-
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.sub-container{
+  
+}
 .heading {
-  font-size: 2vw;
+    font-size: 3vw;
+    /* width: 32vw; */
+    margin: -4px;
 }
 .heading h3{
-    width: 46%;
     color: #edf2f4;
-    
-    
+    margin: 0;
 }
+    
+
 
 
 .glow-on-hover {
@@ -131,7 +139,11 @@ margin-top: 0;
    
 }
 .getfolders{
-    display: flex;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    
+    text-align: center;
 }
 .card-body {
     margin-top: -24px;

@@ -11,16 +11,16 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="heading">
         <h3>Memory Manager</h3>
       </div>
-    </header>
-    <section>
       <div class="button">
         <button class="glow-on-hover" type="button">Organize</button>
       </div>
-    </section>
+    </header>
+   
+  
     <section class="panel">
       <div class="cm-address-bar-search" clear>
         <div class="address-search">
@@ -45,19 +45,23 @@
 
         </div>
       </div>
-      <div class="folders">
-        <p>Devices & Drives</p>
-        <div class="template">
-            
+      <div class="sub-container">
+        <div class="folders">
+          <p>Devices & Drives</p>
+          <div class="template">
+              
+            </div>
+          </div>
+        <div class="folders">
+          <p> Files <i class="fas fa-chevron-up"></i></p>
+            <div class="allfiles">
+          
           </div>
         </div>
       </div>
-      <div class="folders">
-        <p> Files <i class="fas fa-chevron-up"></i></p>
-          <div class="allfiles">
-        
-        </div>
+    
       </div>
+     
     </section>
     <script src="./organize.js"></script>
     <script src="./organizebtn.js"></script>

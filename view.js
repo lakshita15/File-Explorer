@@ -20,6 +20,7 @@ function getContent(dirpath) {
     for(let i in filesss){
         console.log(arr.push(i))
     }
+    return filesss
 }
 function viewFlat(dirpath) {
     let isFile = isFilorNot(dirpath);
