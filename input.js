@@ -1,3 +1,5 @@
+/==============================Functioning of the Address Bar============================================/;
+
 let Ibox = document.querySelector(".address-search-input");
 Ibox.addEventListener("keydown", function (e) {
   if (e.key == "Enter") {
@@ -6,13 +8,12 @@ Ibox.addEventListener("keydown", function (e) {
       alert("Enter A valid Path");
     }
     let dij = isFilorNot(Ibox.value);
-
+    /===folder And File check=====/;
     if (dij == true) {
       let child = getContent(Ibox.value);
       console.log(child);
       console.log(dij);
     } else {
-      // console.log('............................',Ibox.value)
       let child = getContent(Ibox.value);
       // console.log(child)
       let folderDiv = document.querySelector(".getfolders");
@@ -22,28 +23,24 @@ Ibox.addEventListener("keydown", function (e) {
         x = Ibox.value + "\\" + x;
 
         if (!isFilorNot(x)) {
-          folderDiv.innerHTML += ` <div class="folderss" 
-              style="
-                  width: 19vw;
-                  style="height: 3rem;color: white;"
-                  
-                  font-style: oblique;
-                  
-                  border-radius: 19%;">
-                  <i class  = "fas fa-folder"style="background-color: #90c3e100;color: #102343f0;box-shadow: 3px 3px 5px #102343;padding: 2vw;"></i>
+          folderDiv.innerHTML += ` <div class="folderss">
+                  <i class = "fas fa-folder"
+                    style=
+                    "background-color: #90c3e100;
+                    color: #102343f0;
+                    box-shadow: 3px 3px 5px #102343;
+                    padding: 2vw;">
+                   </i>
               <div class="folder-body">
                   <li class="folder-title" style="
-                  min-height: 5rem;
-                  max-height: 10rem;
-                  list-style:none;
-                  color: #102343;
+                    min-height: 5rem;
+                    max-height: 10rem;
+                    list-style:none;
+                    color: #102343;
                   ">
                   ${name}
                   </li>
-              </div>
-              
-          
-           
+              </div>    
        </div>`;
         } else {
           folderDiv.innerHTML += ` <div class="folderss" 
@@ -65,13 +62,10 @@ Ibox.addEventListener("keydown", function (e) {
               ${name}
               </li>
           </div>
-          
-      
-       
    </div>`;
         }
       });
-
+                    /========== On folder click fo to its internal components========/
       let folderss = document.querySelectorAll(".folderss");
       folderss.forEach((x) => {
         x.addEventListener("click", function () {
@@ -84,7 +78,7 @@ Ibox.addEventListener("keydown", function (e) {
     }
   }
 });
-
+              /====================on arrow btn click go to the directory path==========================/
 let submitBtn = document.querySelector(".fa-arrow-right");
 submitBtn.addEventListener("click", showFOlderss);
 function showFOlderss() {
@@ -100,14 +94,7 @@ function showFOlderss() {
       x = Ibox.value + "\\" + x;
       //   console.log(isFilorNot(x),x,".........")
       if (!isFilorNot(x)) {
-        folderDiv.innerHTML += ` <div class="folderss" 
-                  style="
-                      width: 19vw;
-                      style="height: 3rem;color: white;"
-                      
-                      font-style: oblique;
-                      
-                      border-radius: 19%;">
+        folderDiv.innerHTML += ` <div class="folderss">
                   <i class  = "fas fa-folder"style="background-color: #90c3e100;color: #102343f0;box-shadow: 3px 3px 5px #102343;padding: 2vw;"></i>
                   <div class="folder-body">
                       <li class="folder-title" style="
@@ -119,19 +106,9 @@ function showFOlderss() {
                       ${name}
                       </li>
                   </div>
-                  
-              
-               
-           </div>`;
+              </div>`;
       } else {
-        folderDiv.innerHTML += ` <div class="folderss" 
-              style="
-                  width: 19vw;
-                  style="height: 3rem;color: white;"
-                  
-                  font-style: oblique;
-                  
-                  border-radius: 19%;">
+        folderDiv.innerHTML += ` <div class="folderss">
                   <i class  = "fas fa-folder"style="background-color: #90c3e100;color: #102343f0;box-shadow: 3px 3px 5px #102343;padding: 2vw;"></i>
               <div class="folder-body">
                   <li class="folder-title" style="
@@ -161,7 +138,7 @@ function showFOlderss() {
     });
   }
 }
-
+                      /======Back button function to get back to thee previous directory==========/
 let backbtn = document.querySelector(".fa-arrow-left");
 backbtn.addEventListener("click", function () {
   let string = Ibox.value;

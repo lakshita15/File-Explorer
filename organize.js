@@ -24,7 +24,7 @@ let types = {
 
 function copytodest(dirpath, destfolderPath) {
   let orginalName = path.basename(dirpath);
-  // C://downalod/organized/others/abc.js
+  //eg:- C://downalod/organized/others/audio.mp4
   let destFilePath = path.join(destfolderPath, orginalName);
   fs.copyFileSync(dirpath, destFilePath);
 }
@@ -38,7 +38,7 @@ function getContent(dirpath) {
   return fs.readdirSync(dirpath);
 }
 function getFolderName(dirpath) {
-  let strArr = dirpath.split(".");
+  let strArr = dirpath.split("."); //arr.ext => ext aaya 
   let ext = strArr.pop();
   // alternative-> path.ext()
   // console.log(ext);
@@ -51,14 +51,16 @@ function getFolderName(dirpath) {
   }
   return "others";
 }
+
+                                /=========organize function=============/
 function orgFiles(dirpath, organizedFilesPath) {
   let isFile = isFilorNot(dirpath);
   if (isFile == true) {
-    //   identify dest folder
+    //   identify destination folder
     // console.log(dirpath);
     let destFolderName = getFolderName(dirpath);
     console.log(dirpath, "-->", destFolderName);
-    //dirPath-> C:\Users\Ritik Singh\Desktop\Batches\PP-Batch-2\2_File_System_6_03_2021\activity\mycli.js
+    //dirPath-> C:\Users\lenovo\Desktop\Batches\MMUB\async
     let destFolderPath = path.join(organizedFilesPath, destFolderName);
     copytodest(dirpath, destFolderPath);
   } else {
@@ -70,6 +72,7 @@ function orgFiles(dirpath, organizedFilesPath) {
   }
   // file -> dest folder name
 }
+                                  /=======create a directory=====/
 function dirCreator(dirpath) {
   if (fs.existsSync(dirpath) == false) {
     fs.mkdirSync(dirpath);

@@ -12,6 +12,7 @@ function getDrive() {
 function getresults(disks) {
   console.log("hi");
   let count = 1;
+  // size calculation of disks
   for (let disk of disks) {
     count++;
     let driveSize = disk.used / (1000 * 1000 * 1000);
