@@ -1,6 +1,5 @@
-let fs = require("fs")
-let p = require("path");
 let arr = [];
+
 function view(dirpath, mode) {
     if (mode == "tree") {
         // console.log("Tree is working")

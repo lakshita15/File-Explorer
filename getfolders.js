@@ -1,5 +1,4 @@
-const view = require("./view");
-let sign = window.prompt('Are you feeling lucky');
+
 
 //joining path of directory 
 function getfiles(){
@@ -14,8 +13,7 @@ function getfiles(){
         console.log(files)
         //listing all files using forEach
         files.forEach(function (file) {
-            // Do whatever you want to do with the file
-            // console.log(file);
+            
             let getallfiles = document.querySelector(".getfolders")
             getallfiles.innerHTML+=`<div class="folderss" 
             style="

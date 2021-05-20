@@ -8,10 +8,10 @@ function getfiles(x) {
       return console.log("Unable to scan directory: " + err);
     }
     //listing all files using forEach
-    let allFiles = document.querySelectorAll(".files")
-    allFiles.forEach(x=>{
-      x.remove();
-    })
+    // let allFiles = document.querySelectorAll(".files")
+    // allFiles.forEach(x=>{
+    //   x.remove();
+    // })
     files.forEach(function (file) {
       // Do whatever you want to do with the file
       // console.log(file);
@@ -49,3 +49,4 @@ function getfiles(x) {
 }
 
 getfiles();
+
