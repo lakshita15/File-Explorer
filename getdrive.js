@@ -3,14 +3,14 @@ const nodeDiskInfo = require("node-disk-info");
 function getDrive() {
   try {
     const disks = nodeDiskInfo.getDiskInfoSync();
-getresults(disks);
+    getresults(disks);
     console.log(disks);
   } catch (e) {
     console.error(e);
   }
 }
 function getresults(disks) {
-    console.log("hi")
+  console.log("hi");
   let count = 1;
   for (let disk of disks) {
     count++;
@@ -22,25 +22,22 @@ function getresults(disks) {
     width = width * 100 + "";
     x = width.split(".");
     width = x[0] + "." + x[1].substring(0, 2);
-    let template = document.querySelector(".template")
-    template.innerHTML +=
-     `<div class="card" 
+    let template = document.querySelector(".template");
+    template.innerHTML += `<div class="card" 
      style="
      height: 12vw;
-     width: 14vw;
-     margin: 0vw;
-     background-color: #98c1d9;
+     width: 18vw;
+     background-color: #102343;
      font-style: oblique;
-     /* padding-left: 0.5vw; */
      opacity: 0.8;
      border-radius: 10%;
      padding: 1vw;
-     box-shadow: 2px 0px 9px 2px #98c1d9;
-     /* border: 3px solid #bbf9af; */
+     box-shadow: 2px 0px 22px 3px #102343;
+     border: 3px solid #282caa;
      ">
            
             <div class="card-body">
-                <h2 class="card-title" style="height: 3rem;color: #3d5a80;padding: 1vw;">
+                <h2 class="card-title" style="height: 3rem;color: #98c1d9;padding: 1vw;">
                 ${disk.mounted}
                 </h2>
             </div>
@@ -50,8 +47,8 @@ function getresults(disks) {
           </div>
           <div class="info" style="
           display: flex;
-          font-size: 1vw;
-          color: #3d5a80;
+          font-size: 1.3vw;
+          color: #98c1d9;
           margin-top: 1vw;
           justify-content: space-between;
       ">
@@ -60,13 +57,12 @@ function getresults(disks) {
           </div>
          
      </div>`;
-         
-        let percentage = template.querySelector(".percentage");
-        percentage.style.width = `${width}%`
-       
-        // console.log(template)
+
+    let percentage = template.querySelector(".percentage");
+    percentage.style.width = `${width}%`;
+
+    // console.log(template)
   }
-  
 }
 
 getDrive();
