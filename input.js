@@ -35,6 +35,8 @@ Ibox.addEventListener("keydown", function (e) {
                   <li class="folder-title" style="
                     min-height: 5rem;
                     max-height: 10rem;
+                    font-size: 1.5vw;
+
                     list-style:none;
                     color: #102343;
                   ">
@@ -56,6 +58,8 @@ Ibox.addEventListener("keydown", function (e) {
               <li class="folder-title" style="
               min-height: 5rem;
               max-height: 10rem;
+              font-size: 1.5vw;
+
               list-style:none;
               color: #102343;
               ">
@@ -100,6 +104,8 @@ function showFOlderss() {
                       <li class="folder-title" style="
                       min-height: 5rem;
                       max-height: 10rem;
+                      font-size: 1.5vw;
+
                       list-style:none;
                       color: #102343;
                       ">
@@ -113,6 +119,7 @@ function showFOlderss() {
               <div class="folder-body">
                   <li class="folder-title" style="
                   min-height: 5rem;
+                  font-size: 1.5vw;
                   max-height: 10rem;
                   list-style:none;
                   color: #102343;
